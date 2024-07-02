@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Blog{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Inicio</a></li>
+                <li><a href="{% url 'crear_categoria' %}">Crear Categoría</a></li>
+                <li><a href="{% url 'crear_publicacion' %}">Crear Publicación</a></li>
+                <li><a href="{% url 'crear_comentario' %}">Crear Comentario</a></li>
+                <li><a href="{% url 'buscar' %}">Buscar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
